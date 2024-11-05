@@ -1,80 +1,97 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Interactive Quadratic Function Explorer</title>
+    <title>Penjelajah Fungsi Kuadrat Interaktif</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
     <nav>
-        <div class="logo">QuadraticMaster</div>
+        <div class="logo">MasterKuadrat</div>
         <ul>
-            <li><a href="#home">Home</a></li>
-            <li class="li-navbar">
-                <a href="calculator.html">Calculator</a></li>
-            <li class="li-navbar">
-                <a href="profil.html">Profile</a></li>
+            <li><a href="#beranda">Beranda</a></li>
+            <li><a href="#kalkulator">Kalkulator</a></li>
+            <li><a href="#grafik">Grafik</a></li>
         </ul>
     </nav>
 
     <div class="container">
-        <section id="home" class="animate__animated animate__fadeIn">
-            <h1>Explore Quadratic Functions</h1>
-            <p>Interactive learning platform for understanding quadratic functions</p>
-        </section>
-
-        <section id="theory" class="animate__animated animate__fadeIn">
-            <h2>Understanding Quadratic Functions</h2>
-            <div class="theory-card">
-                <h3>Definition</h3>
-                <p>A quadratic function is a polynomial function of degree 2, written in the form:</p>
-                <div class="formula">f(x) = ax² + bx + c</div>
-                <p>where:</p>
+        <section id="beranda" class="animate__animated animate__fadeIn">
+            <h1>Jelajahi Fungsi Kuadrat</h1>
+            <p>Platform pembelajaran interaktif untuk memahami fungsi kuadrat</p>
+            
+            <div class="explanation">
+                <h2>Penjelasan Fungsi Kuadrat</h2>
+                <p>
+                    Fungsi kuadrat adalah fungsi polinomial berderajat dua yang memiliki bentuk umum f(x) = ax² + bx + c, di mana:
+                </p>
                 <ul>
-                    <li>a ≠ 0 (determines opening direction and width)</li>
-                    <li>b affects the axis of symmetry</li>
-                    <li>c is the y-intercept</li>
+                    <li>a ≠ 0 (jika a = 0, maka fungsinya bukan kuadrat)</li>
+                    <li>a, b, dan c adalah konstanta real</li>
+                    <li>x adalah variabel</li>
                 </ul>
+                <h3>Karakteristik fungsi kuadrat:</h3>
+                <ol>
+                    <li>Grafik fungsi kuadrat berbentuk parabola.</li>
+                    <li>Jika a > 0, parabola terbuka ke atas (cembung).</li>
+                    <li>Jika a < 0, parabola terbuka ke bawah (cekung).</li>
+                    <li>Sumbu simetri parabola adalah garis vertikal yang membagi parabola menjadi dua bagian yang simetris.</li>
+                    <li>Titik puncak parabola adalah titik tertinggi (jika a < 0) atau terendah (jika a > 0) pada parabola.</li>
+                </ol>
+                <h3>Fungsi kuadrat memiliki beberapa komponen penting:</h3>
+                <ol>
+                    <li>Titik potong sumbu y: titik di mana parabola memotong sumbu y, yaitu (0, c).</li>
+                    <li>Titik potong sumbu x: titik-titik di mana parabola memotong sumbu x, jika ada.</li>
+                    <li>Sumbu simetri: garis vertikal yang membagi parabola menjadi dua bagian yang simetris.</li>
+                    <li>Titik puncak: titik tertinggi atau terendah pada parabola.</li>
+                </ol>
+                <p>
+                    Fungsi kuadrat digunakan dalam berbagai bidang, termasuk fisika, ekonomi, dan teknik, untuk memodelkan berbagai fenomena seperti lintasan peluru, analisis keuntungan, dan banyak lagi.
+                </p>
             </div>
         </section>
 
-        <section id="calculator" class="animate__animated animate__fadeIn">
-            <h2>Interactive Calculator</h2>
+        <section id="kalkulator" class="animate__animated animate__fadeIn">
+            <h2>Kalkulator Fungsi Kuadrat</h2>
             <div class="calculator-container">
                 <div class="input-section">
                     <div class="coefficient-input">
-                        <label for="a">a:</label>
-                        <input type="range" id="a" min="-5" max="10" step="0.1" value="1">
-                        <span id="a-value">1</span>
+                        <label for="a">a: <span id="a-value">1</span></label>
+                        <div class="input-group">
+                            <input type="range" id="a" min="-100" max="100" step="0.1" value="1">
+                            <input type="number" id="a-number" class="number-input" value="1" step="0.1">
+                        </div>
                     </div>
                     <div class="coefficient-input">
-                        <label for="b">b:</label>
-                        <input type="range" id="b" min="-10" max="10" step="0.1" value="0">
-                        <span id="b-value">0</span>
+                        <label for="b">b: <span id="b-value">0</span></label>
+                        <div class="input-group">
+                            <input type="range" id="b" min="-100" max="100" step="0.1" value="0">
+                            <input type="number" id="b-number" class="number-input" value="0" step="0.1">
+                        </div>
                     </div>
                     <div class="coefficient-input">
-                        <label for="c">c:</label>
-                        <input type="range" id="c" min="-10" max="10" step="0.1" value="0">
-                        <span id="c-value">0</span>
+                        <label for="c">c: <span id="c-value">0</span></label>
+                        <div class="input-group">
+                            <input type="range" id="c" min="-100" max="100" step="0.1" value="0">
+                            <input type="number" id="c-number" class="number-input" value="0" step="0.1">
+                        </div>
                     </div>
                 </div>
 
-                <div class="graph-container">
-                    <canvas id="quadraticGraph"></canvas>
-                </div>
-
-                <div class="results">
-                    <h3>Properties:</h3>
+                <div class="hasil">
+                    <h3>Fungsi Kuadrat:</h3>
+                    <div id="function-notation" class="function-notation"></div>
+                    <h3>Sifat-sifat:</h3>
                     <div id="properties"></div>
                 </div>
             </div>
         </section>
 
-        <section id="examples" class="animate__animated animate__fadeIn">
-            <h2>Example Problems</h2>
-            <div class="example-cards">
-                <!-- Example problems will be dynamically added here -->
+        <section id="grafik" class="animate__animated animate__fadeIn">
+            <h2>Grafik Fungsi Kuadrat</h2>
+            <div class="graph-container">
+                <canvas id="quadraticGraph"></canvas>
             </div>
         </section>
     </div>
