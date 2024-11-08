@@ -1,11 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
+    <title>Penjelajah Fungsi Kuadrat Interaktif</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" type="text/css" href="calculator.css">
 </head>
 <body>
-    
+    <nav>
+        <div class="logo">MasterKuadrat</div>
+        <ul>
+            <li><a href="#beranda">Beranda</a></li>
+            <li><a href="#kalkulator">Kalkulator</a></li>
+            <li><a href="#grafik">Grafik</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="beranda" class="animate__animated animate__fadeIn">
+            <h1>Jelajahi Fungsi Kuadrat</h1>
+            <p>Platform pembelajaran interaktif untuk memahami fungsi kuadrat</p>
+            
+            <div class="explanation">
+                <h2>Penjelasan Fungsi Kuadrat</h2>
+                <p>
+                    Fungsi kuadrat adalah fungsi polinomial berderajat dua yang memiliki bentuk umum f(x) = ax² + bx + c, di mana:
+                </p>
+                <ul>
+                    <li>a ≠ 0 (jika a = 0, maka fungsinya bukan kuadrat)</li>
+                    <li>a, b, dan c adalah konstanta real</li>
+                    <li>x adalah variabel</li>
+                </ul>
+                <h3>Karakteristik fungsi kuadrat:</h3>
+                <ol>
+                    <li>Grafik fungsi kuadrat berbentuk parabola.</li>
+                    <li>Jika a > 0, parabola terbuka ke atas (cembung).</li>
+                    <li>Jika a < 0, parabola terbuka ke bawah (cekung).</li>
+                    <li>Sumbu simetri parabola adalah garis vertikal yang membagi parabola menjadi dua bagian yang simetris.</li>
+                    <li>Titik puncak parabola adalah titik tertinggi (jika a < 0) atau terendah (jika a > 0) pada parabola.</li>
+                </ol>
+                <h3>Fungsi kuadrat memiliki beberapa komponen penting:</h3>
+                <ol>
+                    <li>Titik potong sumbu y: titik di mana parabola memotong sumbu y, yaitu (0, c).</li>
+                    <li>Titik potong sumbu x: titik-titik di mana parabola memotong sumbu x, jika ada.</li>
+                    <li>Sumbu simetri: garis vertikal yang membagi parabola menjadi dua bagian yang simetris.</li>
+                    <li>Titik puncak: titik tertinggi atau terendah pada parabola.</li>
+                </ol>
+                <p>
+                    Fungsi kuadrat digunakan dalam berbagai bidang, termasuk fisika, ekonomi, dan teknik, untuk memodelkan berbagai fenomena seperti lintasan peluru, analisis keuntungan, dan banyak lagi.
+                </p>
+            </div>
+        </section>
+
+        <section id="kalkulator" class="animate__animated animate__fadeIn">
+            <h2>Kalkulator Fungsi Kuadrat</h2>
+            <div class="calculator-container">
+                <div class="input-section">
+                    <div class="coefficient-input">
+                        <label for="a">a: <span id="a-value">1</span></label>
+                        <div class="input-group">
+                            <input type="range" id="a" min="-100" max="100" step="0.1" value="1">
+                            <input type="number" id="a-number" class="number-input" value="1" step="0.1">
+                        </div>
+                    </div>
+                    <div class="coefficient-input">
+                        <label for="b">b: <span id="b-value">0</span></label>
+                        <div class="input-group">
+                            <input type="range" id="b" min="-100" max="100" step="0.1" value="0">
+                            <input type="number" id="b-number" class="number-input" value="0" step="0.1">
+                        </div>
+                    </div>
+                    <div class="coefficient-input">
+                        <label for="c">c: <span id="c-value">0</span></label>
+                        <div class="input-group">
+                            <input type="range" id="c" min="-100" max="100" step="0.1" value="0">
+                            <input type="number" id="c-number" class="number-input" value="0" step="0.1">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hasil">
+                    <h3>Fungsi Kuadrat:</h3>
+                    <div id="function-notation" class="function-notation"></div>
+                    <h3>Sifat-sifat:</h3>
+                    <div id="properties"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="grafik" class="animate__animated animate__fadeIn">
+            <h2>Grafik Fungsi Kuadrat</h2>
+            <div class="graph-container">
+                <canvas id="quadraticGraph"></canvas>
+            </div>
+        </section>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+    <script src="calculator.js"></script>
 </body>
 </html>
