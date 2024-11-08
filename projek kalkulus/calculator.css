@@ -1,0 +1,118 @@
+body {
+    background: linear-gradient(#AED2FF, #E4F1FF);
+}
+nav {
+    background-color: #A594F9; /* Warna latar belakang menu */
+    padding: 10px 20px; /* Padding atas dan bawah, serta sedikit padding samping */
+    display: flex; /* Menggunakan flexbox untuk tata letak */
+    justify-content: space-between; /* Menyebar logo dan menu */
+    align-items: center; /* Menyelaraskan item menu secara vertikal */
+    color: white; /* Warna teks menu */
+}
+nav .logo {
+    font-size: 24px; /* Ukuran font logo */
+    font-weight: bold; /* Menebalkan teks logo */
+}
+
+nav ul {
+    list-style: none; /* Menghapus bullet dari daftar */
+    display: flex; /* Menggunakan flexbox untuk item menu */
+    gap: 20px; /* Jarak antar item menu */
+    margin: 0; /* Menghapus margin untuk daftar */
+    padding: 0; /* Menghapus padding untuk daftar */
+}
+
+nav ul li {
+    display: inline; /* Menampilkan item menu dalam satu baris */
+}
+
+nav ul li a {
+    color: white; /* Warna teks tautan */
+    text-decoration: none; /* Menghapus garis bawah pada tautan */
+    transition: color 0.3s; /* Efek transisi saat hover */
+    padding: 8px 12px; /* Padding untuk tautan agar lebih besar dan lebih mudah diklik */
+}
+
+nav ul li a:hover {
+    color: #E5D9F2; /* Warna teks saat hover */
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.explanation {
+    background-color: #F5EFFF;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.explanation h2, .explanation h3 {
+    color: #F5EFFF;
+    margin-top: 20px;
+}
+
+.explanation p, .explanation ul, .explanation ol {
+    margin-bottom: 15px;
+}
+
+.explanation ul, .explanation ol {
+    padding-left: 20px;
+}
+#calculator, #graph {
+    margin-bottom: 40px;
+}
+
+.calculator-container, .graph-container {
+    background-color: #F5EFFF;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.input-section {
+    margin-bottom: 20px;
+}
+
+.coefficient-input {
+    margin-bottom: 15px;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.number-input {
+    width: 70px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="range"] {
+    flex: 1;
+}
+
+#quadraticGraph {
+    width: 100%;
+    max-width: 600px;
+    height: 400px;
+    margin: 0 auto;
+}
+
+.function-notation {
+    font-size: 24px;
+    font-weight: bold;
+    color: #007bff;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+/* Additional styles... */
